@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h1{
+            -webkit-text-size-adjust: 100%;
+            --swiper-navigation-size: 44px;
+            color: var(--text--primary);
+            cursor: auto;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            box-sizing: border-box;
+            margin: .67em 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: "Dosis variant0", Tofu;
+            color: white;
+            text-align: center;
+            font-weight: 900;
+            line-height: 133%;
+            font-size: 2.75rem;
+        }
+
+    nav.sticky .nav-links h1 a{
+        color: #fff;
+        transition: all 0.4s ease;
+        }
+
+        
+    body {
+        background: #ecececdb;
+    }
+
+    .card-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1250px;
+        margin: 150px auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card-list .card-item {
+        background: #fff;
+        padding: 26px;
+        border-radius: 8px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+        list-style: none;
+        cursor: pointer;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: border 0.5s ease;
+    }
+
+    .card-list .card-item:hover {
+        border: 2px solid #000;
+    }
+
+    .card-list .card-item img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .card-list span {
+        display: inline-block;
+        background: #F7DFF5;
+        margin-top: 32px;
+        padding: 8px 15px;
+        font-size: 0.75rem;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+
+
+
+    .card-item h3 {
+        color: #000;
+        font-size: 1.438rem;
+        margin-top: 28px;
+        font-weight: 600;
+    }
+
+    .card-item .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-35deg);
+        height: 40px;
+        width: 40px;
+        color: white;
+        border: 1px solid #000;
+        border-radius: 50%;
+        margin-top: 40px;
+        transition: 0.2s ease;
+    }
+
+    .card-list .card-item:hover .arrow  {
+        background: #000;
+        color: green; 
+    }
+
+    @media (max-width: 1200px) {
+        .card-list .card-item {
+            padding: 15px;
+        }
+    }
+
+    @media screen and (max-width: 980px) {
+        .card-list {
+            margin: 0 auto;
+        }
+    }  
+    
+    
+    .des{
+            padding: 3px;
+            text-align: center;
+            
+            padding-top: 10px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        button{
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            --swiper-theme-color: #007aff;
+            --swiper-navigation-size: 44px;
+            font-family: DM Sans,sans-serif!important;
+            display: inline-flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            position: relative;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            outline: 0;
+            border: 0;
+            margin: 0;
+            cursor: pointer;
+            user-select: none;
+            vertical-align: middle;
+      
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.75;
+            text-transform: uppercase;
+            min-width: 64px;
+            padding: 6px 16px;
+            border-radius: 4px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            background-color: black;
+            box-shadow: none;
+            color: white;
+            letter-spacing: 0.1em;
+            width: 100%;
+            text-align: center;
+            }
+        button:hover{
+            background-color: black;
+            color: white;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+            /* Google Font Import Link */
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        nav{
+        position: fixed;
+        background-color: #24b8fd;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        transition: all 0.4s ease;
+        }
+        nav.sticky{
+        padding: 15px 20px;
+        background: black;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav .nav-content{
+        height: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        nav .logo a{
+        font-weight: 500;
+        font-size: 35px;
+        color: black;
+        }
+        nav.sticky .logo a{
+        color: #fff;
+        }
+        .nav-content .nav-links{
+        display: flex;
+        }
+        .nav-content .nav-links li{
+        list-style: none;
+        margin: 0 8px;
+        }
+        .nav-links li a{
+        text-decoration: none;
+        color: #0E2431;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px 4px;
+        transition: all 0.3s ease;
+        }
+        .nav-links li a:hover{
+        color: black;
+        }
+        nav.sticky .nav-links li a{
+        color: #fff;
+        transition: all 0.4s ease;
+        }
+        nav.sticky .nav-links li a:hover{
+        color: #0E2431;
+        }
+        .home{
+        height: 100vh;
+        width: 100%;
+        background: url("images/background.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        h2{
+        font-size: 30px;
+        margin-bottom: 6px;
+        color: black;
+        }
+        .text{
+        text-align: justify;
+        padding: 40px 80px;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+          <div class="logo">
+            <h1 href="#" class="logo">Video - Editing</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="video_txt_to_video.html">Text to video</a></li>
+            <li><a href="video_vid_enh.html">Video Enhancer</a></li>
+            <li><a href="video_vid_gen.html">Video Generators</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <script>
+        let nav = document.querySelector("nav");
+          window.onscroll = function() {
+            if(document.documentElement.scrollTop > 20){
+              nav.classList.add("sticky");
+            }else {
+              nav.classList.remove("sticky");
+            }
+          }
+        </script>
+      
+
+
+    <div class="main">
+
+        <div class="card-list">
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F6e2137617dd50673e3955c0050f103cb27ef4db6-1897x1080.jpg%3Frect%3D0%2C45%2C1897%2C990%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Shuffll</h3>
+                <br>
+                <description>AI-powered video production platform for fast, personalized content creation.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://shuffll.com/futurepedia/'">Visit</button>
+                 </div>
+              </a>
+        
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fa703aa7105f60824de93f48abb44107a3cb5f296-1680x876.jpg%3Frect%3D1%2C0%2C1679%2C876%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>FineShare FineCam</h3>
+                <br>
+                <description>Transform your video calls and recordings with FineShare FineCam's advanced capabilities</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://www.fineshare.com/finecam/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F8d872bc148b698554f72d38bc3c2f7e4f0098217-1757x883.jpg%3Frect%3D33%2C0%2C1692%2C883%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Papercup</h3>
+                <br>
+                <description>Automate dubbing with AI in multiple languages</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://www.papercup.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F9c6a06c76e01f7fdc94e8a4189c997f6f5337a53-1878x966.jpg%3Frect%3D14%2C0%2C1851%2C966%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>CAPTURELAB</h3>
+                <br>
+                <description>CAPTURELAB auto-detects your best gaming moments with AI!</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://capturelab.gg/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F1d69a658b05209152a1bcf5a765ce3fda06ea1bb-2522x1251.png%3Frect%3D63%2C0%2C2397%2C1251%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Powder</h3>
+                <br>
+                <description>AI-Powered Clipping Software for Gaming</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://powder.gg/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fe7772a06f2a4fb5bcb13e4c241deb91c98b85aa6-2530x1253.jpg%3Frect%3D65%2C0%2C2401%2C1253%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Vimeo AIr</h3>
+                <br>
+                <description>All-in-one video creation and editing platform that leverages artificial intelligence to simplify the video-making process.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://vimeo.com/campaigns/one-take-video?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F516f5ada74661dcd4f39ac2643abd8623911be99-2539x1244.jpg%3Frect%3D78%2C0%2C2384%2C1244%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Spikes Studio</h3>
+                <br>
+                <description>Video editing tool designed to transform lengthy videos into viral clips.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://spikes.studio/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F7ccf0e5867a949594168270004e67cd377042479-357x737.png%3Frect%3D0%2C276%2C357%2C186%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>FraimeBot</h3>
+                <br>
+                <description>Innovative tool that simplifies the process of swapping faces in videos.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://t.me/fraimebot?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F8d581e52585c054fef16b06438a73f06cd426251-2531x1239.jpg%3Frect%3D79%2C0%2C2374%2C1239%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Video Candy</h3>
+                <br>
+                <description>Every tool you need to edit videos online. Free and easy to use!</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://videocandy.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F7626402d07607c6a2f3227e27aa873cfc913998a-2537x1271.jpg%3Frect%3D52%2C0%2C2435%2C1271%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Deepshot AI</h3>
+                <br>
+                <description>Deepshot is a customizable dialogue generation and replacement software that revolutionizes video reshooting using AI.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://www.deepshot.ai/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>        
+  </div>
+</div>
+</body>
+</html>

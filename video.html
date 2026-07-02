@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h1{
+            -webkit-text-size-adjust: 100%;
+            --swiper-navigation-size: 44px;
+            color: var(--text--primary);
+            cursor: auto;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            box-sizing: border-box;
+            margin: .67em 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: "Dosis variant0", Tofu;
+            color: white;
+            text-align: center;
+            font-weight: 900;
+            line-height: 133%;
+            font-size: 2.75rem;
+        }
+
+    nav.sticky .nav-links h1 a{
+        color: #fff;
+        transition: all 0.4s ease;
+        }
+
+        
+    body {
+        background: #ecececdb;
+    }
+
+    .card-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1250px;
+        margin: 150px auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card-list .card-item {
+        background: #fff;
+        padding: 26px;
+        border-radius: 8px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+        list-style: none;
+        cursor: pointer;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: border 0.5s ease;
+    }
+
+    .card-list .card-item:hover {
+        border: 2px solid #000;
+    }
+
+    .card-list .card-item img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .card-list span {
+        display: inline-block;
+        background: #F7DFF5;
+        margin-top: 32px;
+        padding: 8px 15px;
+        font-size: 0.75rem;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+
+
+
+    .card-item h3 {
+        color: #000;
+        font-size: 1.438rem;
+        margin-top: 28px;
+        font-weight: 600;
+    }
+
+    .card-item .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-35deg);
+        height: 40px;
+        width: 40px;
+        color: white;
+        border: 1px solid #000;
+        border-radius: 50%;
+        margin-top: 40px;
+        transition: 0.2s ease;
+    }
+
+    .card-list .card-item:hover .arrow  {
+        background: #000;
+        color: green; 
+    }
+
+    @media (max-width: 1200px) {
+        .card-list .card-item {
+            padding: 15px;
+        }
+    }
+
+    @media screen and (max-width: 980px) {
+        .card-list {
+            margin: 0 auto;
+        }
+    }  
+    
+    
+    .des{
+            padding: 3px;
+            text-align: center;
+            
+            padding-top: 10px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        button{
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            --swiper-theme-color: #007aff;
+            --swiper-navigation-size: 44px;
+            font-family: DM Sans,sans-serif!important;
+            display: inline-flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            position: relative;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            outline: 0;
+            border: 0;
+            margin: 0;
+            cursor: pointer;
+            user-select: none;
+            vertical-align: middle;
+      
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.75;
+            text-transform: uppercase;
+            min-width: 64px;
+            padding: 6px 16px;
+            border-radius: 4px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            background-color: black;
+            box-shadow: none;
+            color: white;
+            letter-spacing: 0.1em;
+            width: 100%;
+            text-align: center;
+            }
+        button:hover{
+            background-color: black;
+            color: white;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+            /* Google Font Import Link */
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        nav{
+        position: fixed;
+        background-color: #24b8fd;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        transition: all 0.4s ease;
+        }
+        nav.sticky{
+        padding: 15px 20px;
+        background: black;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav .nav-content{
+        height: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        nav .logo a{
+        font-weight: 500;
+        font-size: 35px;
+        color: black;
+        }
+        nav.sticky .logo a{
+        color: #fff;
+        }
+        .nav-content .nav-links{
+        display: flex;
+        }
+        .nav-content .nav-links li{
+        list-style: none;
+        margin: 0 8px;
+        }
+        .nav-links li a{
+        text-decoration: none;
+        color: #0E2431;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px 4px;
+        transition: all 0.3s ease;
+        }
+        .nav-links li a:hover{
+        color: black;
+        }
+        nav.sticky .nav-links li a{
+        color: #fff;
+        transition: all 0.4s ease;
+        }
+        nav.sticky .nav-links li a:hover{
+        color: #0E2431;
+        }
+        .home{
+        height: 100vh;
+        width: 100%;
+        background: url("images/background.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        h2{
+        font-size: 30px;
+        margin-bottom: 6px;
+        color: black;
+        }
+        .text{
+        text-align: justify;
+        padding: 40px 80px;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+          <div class="logo">
+            <h1 href="#" class="logo">Video Tools</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="video_vid_edit.html">Video Editing</a></li>
+            <li><a href="video_vid_enh.html">Video Enhancer</a></li>
+            <li><a href="video_vid_gen.html">Video Generators</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <script>
+        let nav = document.querySelector("nav");
+          window.onscroll = function() {
+            if(document.documentElement.scrollTop > 20){
+              nav.classList.add("sticky");
+            }else {
+              nav.classList.remove("sticky");
+            }
+          }
+        </script>
+      
+
+
+    <div class="main">
+
+        <div class="card-list">
+            <a href="#" class="card-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9-SNGlLi49vxVvuilR2vr9jcL4FD6Rr3dVw&s">
+                
+                <h3>Synthesia</h3>
+                <br>
+                <description>Create all video from text.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.synthesia.io/?via=futurepedia'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://images.wondershare.com/presentory/images2024/home/banner-poster.png">
+                
+                <h3>Wondershare Presentory</h3>
+                <br>
+                <description>AI-Powered PPT outline Generator that revolutionizes presentations, making them smarter and connections easier.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://presentory.wondershare.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeuhOL4AHsjrzrrYKa4axJUwco2Bmd9g7u6g&s">
+                
+                <h3>Vimeo AI</h3>
+                <br>
+                <description>All-in-one video creation and editing platform that leverages artificial intelligence to simplify the video-making process.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://vimeo.com/campaigns/one-take-video?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAqVpB_IxSbqkvmqvvWP3tQfyOIiTs0naaEQ&s">
+                
+                <h3>Spikes Studio</h3>
+                <br>
+                <description>Video editing tool designed to transform lengthy videos into viral clips.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.spikes.studio/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://cdn.prod.website-files.com/64f605bdfa749671fed117a9/655656135ed814bc8a9e48f7_Shortmake.png">
+                
+                <h3>Shortmake</h3>
+                <br>
+                <description>Shortmake is an AI-powered tool that simplifies the process of creating viral videos.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://app.shortmake.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_7dcs94nPms71NvTDB0WUVntPRFsgfDfIRg&s">
+                
+                <h3>Video Candy</h3>
+                <br>
+                <description>Every tool you need to edit videos online. Free and easy to use!</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://videocandy.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fd6f66269bdeb252c4604b10b806e2d757ee39aa2-1872x932.jpg%3Frect%3D43%2C0%2C1786%2C932%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+                
+                <h3>Gen-2 by Runway</h3>
+                <br>
+                <description>An actual text to video model.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://research.runwayml.com/gen2?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+              </a>
+        
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Ff8c73ca1b66357f4e5c60d1433b2753a1595360f-2537x1229.jpg%3Frect%3D92%2C0%2C2355%2C1229%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+                
+                <h3>Wilowrid</h3>
+                <br>
+                <description>Convert video content into text articles quickly and easily. </description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://wilowrid.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fc69dc028b168688f6229a95bb657b9f71f5be674-2528x1264.jpg%3Frect%3D53%2C0%2C2422%2C1264%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+                
+                <h3>Video2text</h3>
+                <br>
+                <description>Transcribes videos into text.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.video2text.de/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F08f31cd4902a7753099105ae658836cd9df734df-1920x849.png%3Frect%3D147%2C0%2C1627%2C849%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+                
+                <h3>Phenaki</h3>
+                <br>
+                <description>A model for generating videos from text.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://phenaki.video/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fa703aa7105f60824de93f48abb44107a3cb5f296-1680x876.jpg%3Frect%3D1%2C0%2C1679%2C876%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>FineShare FineCam</h3>
+                <br>
+                <description>Transform your video calls and recordings with FineShare FineCam's advanced capabilities</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://www.fineshare.com/finecam/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F8d872bc148b698554f72d38bc3c2f7e4f0098217-1757x883.jpg%3Frect%3D33%2C0%2C1692%2C883%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Papercup</h3>
+                <br>
+                <description>Automate dubbing with AI in multiple languages</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://www.papercup.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F9c6a06c76e01f7fdc94e8a4189c997f6f5337a53-1878x966.jpg%3Frect%3D14%2C0%2C1851%2C966%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>CAPTURELAB</h3>
+                <br>
+                <description>CAPTURELAB auto-detects your best gaming moments with AI!</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://capturelab.gg/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F1d69a658b05209152a1bcf5a765ce3fda06ea1bb-2522x1251.png%3Frect%3D63%2C0%2C2397%2C1251%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Powder</h3>
+                <br>
+                <description>AI-Powered Clipping Software for Gaming</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://powder.gg/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fe7772a06f2a4fb5bcb13e4c241deb91c98b85aa6-2530x1253.jpg%3Frect%3D65%2C0%2C2401%2C1253%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Vimeo AIr</h3>
+                <br>
+                <description>All-in-one video creation and editing platform that leverages artificial intelligence to simplify the video-making process.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://vimeo.com/campaigns/one-take-video?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F516f5ada74661dcd4f39ac2643abd8623911be99-2539x1244.jpg%3Frect%3D78%2C0%2C2384%2C1244%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Spikes Studio</h3>
+                <br>
+                <description>Video editing tool designed to transform lengthy videos into viral clips.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://spikes.studio/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F7ccf0e5867a949594168270004e67cd377042479-357x737.png%3Frect%3D0%2C276%2C357%2C186%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>FraimeBot</h3>
+                <br>
+                <description>Innovative tool that simplifies the process of swapping faces in videos.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://t.me/fraimebot?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F8d581e52585c054fef16b06438a73f06cd426251-2531x1239.jpg%3Frect%3D79%2C0%2C2374%2C1239%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Video Candy</h3>
+                <br>
+                <description>Every tool you need to edit videos online. Free and easy to use!</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://videocandy.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F7626402d07607c6a2f3227e27aa873cfc913998a-2537x1271.jpg%3Frect%3D52%2C0%2C2435%2C1271%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Deepshot AI</h3>
+                <br>
+                <description>Deepshot is a customizable dialogue generation and replacement software that revolutionizes video reshooting using AI.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://www.deepshot.ai/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F43c353ceb03e89bfdd940ed84742bd6de1ad5cc9-2516x1249.png%3Frect%3D62%2C0%2C2393%2C1249%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+                
+                <h3>Vidiofy</h3>
+                <br>
+                <description>This tool is verified because it is either an established company or has good social media presence.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.futurepedia.io/tool/vidiofy'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F8d2a0fe715314df189ddff095daf21cacf6a8ccc-2531x1251.png%3Frect%3D68%2C0%2C2397%2C1251%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+                
+                <h3>Fliz</h3>
+                <br>
+                <description>Effortless video creation and easy sharing on social platforms for boosting sales.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.futurepedia.io/tool/fliz'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F7e5e66e3af4ec3405390dc1c7a9405905e8ce0c5-2527x1219.png%3Frect%3D96%2C0%2C2336%2C1219%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+                
+                <h3>Video Magic</h3>
+                <br>
+                <description>Video Magic is your solution for creating videos quickly and affordably.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.futurepedia.io/tool/video-magic'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fe7772a06f2a4fb5bcb13e4c241deb91c98b85aa6-2530x1253.jpg%3Frect%3D65%2C0%2C2401%2C1253%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+                
+                <h3>Vimeo AI</h3>
+                <br>
+                <description>All-in-one video creation and editing platform that leverages artificial intelligence to simplify the video-making process.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.futurepedia.io/tool/vimeo-ai'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F2131dd79816c5e69c944a7cb3020f738be910734-2537x1273.jpg%3Frect%3D50%2C0%2C2439%2C1273%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+                
+                <h3>AIPhotoeditor</h3>
+                <br>
+                <description>AIPhotoeditor is a free photo editor that allows users to remove unwanted objects, people, blemishes, or text from their images in seconds.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.futurepedia.io/tool/aiphotoeditor'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F13125b186cf9a773a9bf061fdb896b0086071c69-2533x1266.jpg%3Frect%3D54%2C0%2C2426%2C1266%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+                
+                <h3>WOXO - Idea to Videos</h3>
+                <br>
+                <description>AI-Generated videos in just a minute!</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.futurepedia.io/tool/woxo-idea-to-videos'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F8d581e52585c054fef16b06438a73f06cd426251-2531x1239.jpg%3Frect%3D79%2C0%2C2374%2C1239%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+                
+                <h3>Video Candy</h3>
+                <br>
+                <description>Every tool you need to edit videos online. Free and easy to use!</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.futurepedia.io/tool/video-candy'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fd67c0e0ef3480b0066aa466b1f9f8a30ad374eb2-2426x1261.jpg%3Frect%3D5%2C0%2C2416%2C1261%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+                
+                <h3>Deepfake Generator</h3>
+                <br>
+                <description>Create professional videos with photo-realistic avatars using Deepfake Generator.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.futurepedia.io/tool/deepfake-generator'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F5e08417bb97dd18efd5d0036351c082b21801de1-1440x853.png%3Frect%3D0%2C51%2C1440%2C752%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+                
+                <h3>2short.ai</h3>
+                <br>
+                <description>Elevate your YT content with AI generated shorts</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://2short.ai/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F8a60387368cc268e1cbd781ddf1cc9db9588faaa-1497x926.jpg%3Frect%3D0%2C73%2C1497%2C781%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+                
+                <h3>Xpression Camera</h3>
+                <br>
+                <description>Transform into anyone/anything with a single photo, no processing time.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://xpressioncamera.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+              </a>     
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F7144c0982499395ad5425274a803659fa77d72a9-2534x1225.png%3Frect%3D94%2C0%2C2347%2C1225%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Chromox</h3>
+                <br>
+                <description>Transforming Ideas into Visual Stories | Chromox | AlkaidVision</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://chromox.alkaidvision.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fa6ad23756a57c0719f2e5aa14818f4b5fd1b1265-1920x893.png%3Frect%3D105%2C0%2C1711%2C893%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>SpiritMe</h3>
+                <br>
+                <description>Instant video production with digital avatars</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://spiritme.tech/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F4dc642d29507d2e460bbcf47a815af9846729b70-1680x876.png%3Frect%3D1%2C0%2C1679%2C876%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Fliki</h3>
+                <br>
+                <description>Create videos from blog posts in 2 mins</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://fliki.ai/?via=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F946afbb383accfe306418df3444114d422f9007c-4400x2160.png%3Frect%3D131%2C0%2C4139%2C2160%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Klap</h3>
+                <br>
+                <description>Turn any video into viral shorts.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://klap.app/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F1f8cb9fe75431f774df8ca69159cc2f5cf881662-1897x918.png%3Frect%3D70%2C0%2C1759%2C918%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Flickify</h3>
+                <br>
+                <description>Flickify is the magical way to turn articles, blogs, and text into amazing professional videos without any special training or software.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://www.flickify.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fc970c91999e4cce358e5b86b585782a9a3db3e29-1861x940.jpg%3Frect%3D31%2C0%2C1801%2C940%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Creative Reality Studio (D-ID)</h3>
+                <br>
+                <description>AI-powered platform to create talking avatars from your vision in seconds.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://studio.d-id.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F6e2137617dd50673e3955c0050f103cb27ef4db6-1897x1080.jpg%3Frect%3D0%2C45%2C1897%2C990%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Shuffll</h3>
+                <br>
+                <description>AI-powered video production platform for fast, personalized content creation.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://shuffll.com/futurepedia/'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F0732079080fdf4b0dae38d14d98898e7638d233f-2506x1257.jpg%3Frect%3D49%2C0%2C2409%2C1257%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Lumiere 3D</h3>
+                <br>
+                <description>Generate immersive 3D videos for e-commerce and marketing effortlessly.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://www.lumiere3d.ai/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F35370b561f11cb7e50f4a316994f6cd60f6f934d-1920x848.png%3Frect%3D148%2C0%2C1625%2C848%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Synthesys Studio</h3>
+                <br>
+                <description>Synthesys develops algorithms for text-to-voiceover and videos for commercial use</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://appsumo.8odi.net/LXreB3'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fae674d904ad10cb7faf40f67d83c36a440bf08fd-1270x760.jpg%3Frect%3D0%2C49%2C1270%2C663%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>AI Studios</h3>
+                <br>
+                <description>Create AI-generated videos using basic text instantly</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://www.deepbrain.io/aistudios?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>        
+            
+  </div>
+</div>
+</body>
+</html>

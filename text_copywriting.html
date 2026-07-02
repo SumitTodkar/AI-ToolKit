@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<img src="html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h1{
+            -webkit-text-size-adjust: 100%;
+            --text--primary: #07122b;
+            --cta--primary: #0099f6;
+            --colors--pink: #ef457e;
+            --background--gray: #f8f8f8;
+            --background--blue: #f2faff;
+            --colors--yellow: #ffd44d;
+            --text--secondary: #6a7180;
+            --others--blue: #0a32c3;
+            --swiper-theme-color: #007aff;
+            --swiper-navigation-size: 44px;
+            color: var(--text--primary);
+            cursor: auto;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            box-sizing: border-box;
+            margin: .67em 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: "Dosis variant0", Tofu;
+            color: white;
+            text-align: center;
+            font-weight: 900;
+            line-height: 133%;
+            font-size: 2.75rem;
+        }
+
+    nav.sticky .nav-links h1 a{
+        color: #fff;
+        transition: all 0.4s ease;
+        }
+
+        
+    body {
+        background: #ecececdb;
+    }
+
+    .card-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1250px;
+        margin: 150px auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card-list .card-item {
+        background: #fff;
+        padding: 26px;
+        border-radius: 8px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+        list-style: none;
+        cursor: pointer;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: border 0.5s ease;
+    }
+
+    .card-list .card-item:hover {
+        border: 2px solid #000;
+    }
+
+    .card-list .card-item img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .card-list span {
+        display: inline-block;
+        background: #F7DFF5;
+        margin-top: 32px;
+        padding: 8px 15px;
+        font-size: 0.75rem;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+
+
+
+    .card-item h3 {
+        color: #000;
+        font-size: 1.438rem;
+        margin-top: 28px;
+        font-weight: 600;
+    }
+
+    .card-item .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-35deg);
+        height: 40px;
+        width: 40px;
+        color: white;
+        border: 1px solid #000;
+        border-radius: 50%;
+        margin-top: 40px;
+        transition: 0.2s ease;
+    }
+
+    .card-list .card-item:hover .arrow  {
+        background: #000;
+        color: green; 
+    }
+
+    @media (max-width: 1200px) {
+        .card-list .card-item {
+            padding: 15px;
+        }
+    }
+
+    @media screen and (max-width: 980px) {
+        .card-list {
+            margin: 0 auto;
+        }
+    }  
+    
+    
+    .des{
+            padding: 3px;
+            text-align: center;
+            color: black;
+            padding-top: 10px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        button{
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            --swiper-theme-color: #007aff;
+            --swiper-navigation-size: 44px;
+            font-family: DM Sans,sans-serif!important;
+            display: inline-flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            position: relative;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            outline: 0;
+            border: 0;
+            margin: 0;
+            cursor: pointer;
+            user-select: none;
+            vertical-align: middle;
+          
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.75;
+            text-transform: uppercase;
+            min-width: 64px;
+            padding: 6px 16px;
+            border-radius: 4px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            background-color: black;
+            box-shadow: none;
+            color: white;
+            letter-spacing: 0.1em;
+            width: 100%;
+            text-align: center;
+            }
+        button:hover{
+            background-color: black;
+            color: white;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+            /* Google Font Import Link */
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        nav{
+        position: fixed;
+        background-color: #24b8fd;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        transition: all 0.4s ease;
+        }
+        nav.sticky{
+        padding: 15px 20px;
+        background: black;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav .nav-content{
+        height: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        nav .logo a{
+        font-weight: 500;
+        font-size: 35px;
+        color: black;
+        }
+        nav.sticky .logo a{
+        color: #fff;
+        }
+        .nav-content .nav-links{
+        display: flex;
+        }
+        .nav-content .nav-links li{
+        list-style: none;
+        margin: 0 8px;
+        }
+        .nav-links li a{
+        text-decoration: none;
+        color: #0E2431;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px 4px;
+        transition: all 0.3s ease;
+        }
+        .nav-links li a:hover{
+        color: black;
+        }
+        nav.sticky .nav-links li a{
+        color: #fff;
+        transition: all 0.4s ease;
+        }
+        nav.sticky .nav-links li a:hover{
+        color: #0E2431;
+        }
+        .home{
+        height: 100vh;
+        width: 100%;
+        background: url("images/background.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        h2{
+        font-size: 30px;
+        margin-bottom: 6px;
+        color: black;
+        }
+        .text{
+        text-align: justify;
+        padding: 40px 80px;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+          <div class="logo">
+            <h1 href="#" class="logo">Text-Copywriting</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="text.html">Text</a></li>
+            <li><a href="text_prompt.html">Prompt</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <script>
+        let nav = document.querySelector("nav");
+          window.onscroll = function() {
+            if(document.documentElement.scrollTop > 20){
+              nav.classList.add("sticky");
+            }else {
+              nav.classList.remove("sticky");
+            }
+          }
+        </script>
+      
+
+
+    <div class="main">
+
+        <div class="card-list">
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F70e86da240ce81f924b4742f1f4637dbb02e083d-1680x876.png%3Frect%3D1%2C0%2C1679%2C876%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Marketing blocks AI</h3>
+                <br>
+                <description>AI powered marketing assistant.</description>
+                <div class="des">
+                  <br><br>
+                <button type="button" onclick="location.href='https://questionreality--snapilabs.thrivecart.com/marketingblocks-bundle-unlimited/?ref=futurepedia'">Visit</button>
+                </div>
+                
+            </a>
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fcfd9366784a7fda98637b46b46d03631667a0839-1680x876.png%3Frect%3D1%2C0%2C1679%2C876%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Jasper AI</h3>
+                <br>
+                <description>Create content 10x with the help of AI copywriter.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://jasper.ai/?source=partner&fpr=futurepedia'">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F24d1adf3a3d799b111c15a4ea56a2d70985a71c6-2531x1258.jpg%3Frect%3D61%2C0%2C2411%2C1258%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Chappel</h3>
+                <br>
+                <description>All in one platforms empowers you to create text,image with the help of AI.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://gamma.app/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fc139ac529f31d23a51cf42c4c356395d2eb0e89a-2533x1257.png%3Frect%3D63%2C0%2C2409%2C1257%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Persova</h3>
+                <br>
+                <description>Crafting compelling and integrating sales marketing.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://persuva.ai/?ref=futurepedia'">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fc640caa2dfdc9fe86469833ee015f3075108bd76-1837x1106.jpg%3Frect%3D231%2C111%2C1375%2C718%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Gizmo AI</h3>
+                <br>
+                <description>Gizzmo WP plugin creates Amazon affiliate articles in just two clicks.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://gizzmo.ai/?via=futurepedia'">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fbfa2fe16c1548e1b6e46ad91a439c4f29c2d6197-1680x876.png%3Frect%3D1%2C0%2C1679%2C876%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Cohesive</h3>
+                <br>
+                <description>The most powerful AI editor that amplifies your creativity and productivity.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://cohesive.so/?utm_source=listing&utm_medium=futurepediamay'">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F1b007f933bb7f74dacdfa2ccf28b786a02474051-2539x1268.jpg%3Frect%3D55%2C0%2C2430%2C1268%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Contents</h3>
+                <br>
+                <description>Contents is the Generative AI platform to create impactful content built for performance.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://contents.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F5df73d823e03e45fd069394c3dd39ee53731c74c-1680x876.png%3Frect%3D1%2C0%2C1679%2C876%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Ryter</h3>
+                <br>
+                <description>Contents is the Generative AI platform to create impactful content built for performance.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://contents.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fc44cc25cc3eb4dc6b4c1a1f43d853e98c8f20704-1920x977.png%3Frect%3D24%2C0%2C1872%2C977%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Yaara</h3>
+                <br>
+                <description>Generate creative content from a given prompt.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://yaara.ai/?via=futurepedia'">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fa57107051aee68eaae125e33ba35c8c34df61c65-1680x876.png%3Frect%3D1%2C0%2C1679%2C876%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Copy.AI</h3>
+                <br>
+                <description>AI-powered copywriter for marketing: get started free, no credit card needed!.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.copy.ai/?via=futurepedia '">Visit</button>
+                </div>
+                
+            </a>
+    
+    
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fbe837214bd8c2249f9c5ba8e9bb5c7c9cc158bf4-1680x876.png%3Frect%3D1%2C0%2C1679%2C876%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Writesonic</h3>
+                <br>
+                <description>Create SEO-friendly content with AI for blogs, websites, and articles.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://writesonic.com/chat?ref=futurepedia_io '">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F97cd59935da28f3b5596b6caa1258e6d12dc55cb-2530x1210.png%3Frect%3D106%2C0%2C2319%2C1210%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Quickads</h3>
+                <br>
+                <description>AI Ad Creation Platform for all your Ad Campaigns.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.quickads.ai/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Ffb0ed68c2e00d712f04a43bb9f1750a80aee571b-2526x1256.jpg%3Frect%3D60%2C0%2C2407%2C1256%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Re Doc</h3>
+                <br>
+                <description>ReDoc is your ultimate writing assistant, here to transform your writing process.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://redoc.live/?ref=futurepedia'">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F8e970e517325ac6b91acb91a44f6daf0ba36b093-2515x1249.jpg%3Frect%3D62%2C0%2C2393%2C1249%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Toasty AI</h3>
+                <br>
+                <description>#1 Professional AI Podcast Copywriter.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.toastyai.com/'">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fda35255963966a4f9bbbe4da6d35e2de293ef965-2534x1264.jpg%3Frect%3D56%2C0%2C2422%2C1264%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Impulse AI</h3>
+                <br>
+                <description>Create marketing copy, blog posts, email templates, social media content, video scripts, website content, and more.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.impulseai.io/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fd7c966d6c960d9091c78606278eb302a41aa2078-2524x1253.jpg%3Frect%3D62%2C0%2C2401%2C1253%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                
+                <h3>Affillimatic</h3>
+                <br>
+                <description>Leveraging AI technology, Affilimatic automates content creation, allowing users to scale their websites.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://app.affilimatic.com/?via=futurepedia'">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F85a0679f84a5fbdd177d1897adccd6a4703e2e6f-2551x1263.jpg%3Frect%3D66%2C0%2C2420%2C1263%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                
+                <h3>Storykube</h3>
+                <br>
+                <description>Research, ideate and supercharge your writing with the power of Artificial Intelligence.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://www.storykube.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+                
+            </a>
+    
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fb9ee6903723d7486e516801b93137b9ac48cc3e6-1897x921.png%3Frect%3D0%2C0%2C1765%2C921%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                
+                <h3>ES.AI</h3>
+                <br>
+                <description>Generative AI tool for college applicants and students.</description>
+                <div class="des">
+                  <br><br>
+                  <button type="button" onclick="location.href='https://esai.ai/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                </div>
+                
+            </a>
+
+  </div>
+</div>
+</body>
+</html>

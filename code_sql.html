@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h1{
+            -webkit-text-size-adjust: 100%;
+            --text--primary: #07122b;
+            --cta--primary: #0099f6;
+            --colors--pink: #ef457e;
+            --background--gray: #f8f8f8;
+            --background--blue: #f2faff;
+            --colors--yellow: #ffd44d;
+            --text--secondary: #6a7180;
+            --others--blue: #0a32c3;
+            --swiper-theme-color: #007aff;
+            --swiper-navigation-size: 44px;
+            color: var(--text--primary);
+            cursor: auto;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            box-sizing: border-box;
+            margin: .67em 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: "Dosis variant0", Tofu;
+            color: white;
+            text-align: center;
+            font-weight: 900;
+            line-height: 133%;
+            font-size: 2.75rem;
+        }
+
+    nav.sticky .nav-links h1 a{
+        color: #fff;
+        transition: all 0.4s ease;
+        }
+
+        
+    body {
+        background: #ecececdb;
+    }
+
+    .card-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1250px;
+        margin: 150px auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card-list .card-item {
+        background: #fff;
+        padding: 26px;
+        border-radius: 8px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+        list-style: none;
+        cursor: pointer;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: border 0.5s ease;
+    }
+
+    .card-list .card-item:hover {
+        border: 2px solid #000;
+    }
+
+    .card-list .card-item img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .card-list span {
+        display: inline-block;
+        background: #F7DFF5;
+        margin-top: 32px;
+        padding: 8px 15px;
+        font-size: 0.75rem;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+
+
+
+    .card-item h3 {
+        color: #000;
+        font-size: 1.438rem;
+        margin-top: 28px;
+        font-weight: 600;
+    }
+
+    .card-item .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-35deg);
+        height: 40px;
+        width: 40px;
+        color: white;
+        border: 1px solid #000;
+        border-radius: 50%;
+        margin-top: 40px;
+        transition: 0.2s ease;
+    }
+
+    .card-list .card-item:hover .arrow  {
+        background: #000;
+        color: green; 
+    }
+
+    @media (max-width: 1200px) {
+        .card-list .card-item {
+            padding: 15px;
+        }
+    }
+
+    @media screen and (max-width: 980px) {
+        .card-list {
+            margin: 0 auto;
+        }
+    }  
+    
+    
+    .des{
+            padding: 3px;
+            text-align: center;
+            
+            padding-top: 10px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        button{
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            --swiper-theme-color: #007aff;
+            --swiper-navigation-size: 44px;
+            font-family: DM Sans,sans-serif!important;
+            display: inline-flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            position: relative;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            outline: 0;
+            border: 0;
+            margin: 0;
+            cursor: pointer;
+            user-select: none;
+            vertical-align: middle;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.75;
+            text-transform: uppercase;
+            min-width: 64px;
+            padding: 6px 16px;
+            border-radius: 4px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            background-color: black;
+            box-shadow: none;
+            color: white;
+            letter-spacing: 0.1em;
+            width: 100%;
+            text-align: center;
+            }
+        button:hover{
+            background-color: black;
+            color: white;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+            /* Google Font Import Link */
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        nav{
+        position: fixed;
+        background-color: #24b8fd;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        transition: all 0.4s ease;
+        }
+        nav.sticky{
+        padding: 15px 20px;
+        background: black;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav .nav-content{
+        height: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        nav .logo a{
+        font-weight: 500;
+        font-size: 35px;
+        color: black;
+        }
+        nav.sticky .logo a{
+        color: #fff;
+        }
+        .nav-content .nav-links{
+        display: flex;
+        }
+        .nav-content .nav-links li{
+        list-style: none;
+        margin: 0 8px;
+        }
+        .nav-links li a{
+        text-decoration: none;
+        color: #0E2431;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px 4px;
+        transition: all 0.3s ease;
+        }
+        .nav-links li a:hover{
+        color: black;
+        }
+        nav.sticky .nav-links li a{
+        color: #fff;
+        transition: all 0.4s ease;
+        }
+        nav.sticky .nav-links li a:hover{
+        color: #0E2431;
+        }
+        .home{
+        height: 100vh;
+        width: 100%;
+        background: url("images/background.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        h2{
+        font-size: 30px;
+        margin-bottom: 6px;
+        color: black;
+        }
+        .text{
+        text-align: justify;
+        padding: 40px 80px;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+          <div class="logo">
+            <h1 href="#" class="logo">Code - SQL</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="code.html">Code</a></li>
+            <li><a href="code_assist.html">Code Assistant</a></li>
+            <li><a href="code_low_no_.html">Low/No Code</a></li>
+            <li><a href="code_spreadsht.html">Spreadsheets</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <script>
+        let nav = document.querySelector("nav");
+          window.onscroll = function() {
+            if(document.documentElement.scrollTop > 20){
+              nav.classList.add("sticky");
+            }else {
+              nav.classList.remove("sticky");
+            }
+          }
+        </script>
+      
+
+
+    <div class="main">
+
+        <div class="card-list">
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F3bb4e916031f51bde43c3411ba2c4ec1a17bf8b4-1920x879.png%3Frect%3D118%2C0%2C1684%2C879%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>Airops</h3>
+            
+                            <br>
+                            <description>Task-specific AI Apps that go beyond Chat-GPT—run NLP, generate-data-informed content, draft/fix/optimize SQL queries, and more</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://www.airops.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F07e62e423ad552c8e8ae94d19de8466130d79879-2534x1262.jpg%3Frect%3D58%2C0%2C2418%2C1262%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>Coginiti</h3>
+                            <br>
+                            <description>Your Partner in Simplifying SQL Development. Boost Data and Analytic Productivity with Responsible Generative AI Capabilities.</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://www.coginiti.co/ai-analytics-advisor/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F38e04d28afecf9d4076c65bd0a049aba05ac45b9-2544x1265.jpg%3Frect%3D60%2C0%2C2424%2C1265%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>DataDistillr</h3>
+            
+                            <br>
+                            <description>Integrating your data has never been easier.</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://datadistillr.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F3bc5827a8384f1ac0c45e605fa89ee8dc4b6bac3-1826x895.jpg%3Frect%3D56%2C0%2C1715%2C895%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75"alt="Card Image">
+                            
+                            <h3>MindsDB</h3>
+            
+                            <br>
+                            <description>NLP inside your database</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://mindsdb.com/natural-language-processing-in-databases?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F3117a6c5946f20f2aec3a9cc61587b490e46aaaa-1854x920.jpg%3Frect%3D46%2C0%2C1763%2C920%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>OSS Insight</h3>
+            
+                            <br>
+                            <description>GPT-powered querying tool for GitHub live data exploration</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://ossinsight.io/explore/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F57b265a7510ea1eb4775648fe1e09f4355c97df7-1566x1175.png%3Frect%3D0%2C180%2C1566%2C817%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>Lookup</h3>
+            
+                            <br>
+                            <description>AI-powered analytics platform to get from data to insight 10X faster.</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://app.uselookup.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fde2580317762a7dec6dd374082fcf540a2beb9e3-1680x876.png%3Frect%3D1%2C0%2C1679%2C876%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>Ai2sql</h3>
+            
+                            <br>
+                            <description>Enable non-engineers to write efficient SQL queries without knowing SQL.</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://www.ai2sql.io/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F01c69dfd68604265e2036a967f435b4905479a18-1892x782.jpg%3Frect%3D197%2C0%2C1498%2C782%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>Channel</h3>
+            
+                            <br>
+                            <description>Automate data exploration with natural language questions.</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://www.usechannel.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F06cd61c897d68a8f6f505fd7a19b3e6a67faf47a-2533x1247.png%3Frect%3D73%2C0%2C2389%2C1247%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>SAP HANA Cloud</h3>
+            
+                            <br>
+                            <description>Powering Intelligent Data Applications.</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://www.sap.com/products/technology-platform/hana.html?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F382b25b2cb659c842e8adddb6baefc776aebebf3-2506x1247.png%3Frect%3D59%2C0%2C2389%2C1247%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>Op</h3>
+            
+                            <br>
+                            <description>Stop wrestling with python pandas and generate code by simply asking questions about your data..</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://opapp.io/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F50f68f837fa72d3085737a286a4e7a93c189ecb0-2535x1260.png%3Frect%3D61%2C0%2C2414%2C1260%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>Equals</h3>
+            
+                            <br>
+                            <description>All-in-One AI-Powered Spreadsheet Companion</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://equals.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F50f68f837fa72d3085737a286a4e7a93c189ecb0-2535x1260.png%3Frect%3D61%2C0%2C2414%2C1260%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>Vanna</h3>
+            
+            
+                            <br>
+                            <description>AI-Powered Business Intelligence Assistant for Data Insights</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://vanna.ai/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            
+           
+  </div>
+</div>
+</body>
+</html>

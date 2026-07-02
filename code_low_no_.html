@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h1{
+            -webkit-text-size-adjust: 100%;
+            --text--primary: #07122b;
+            --cta--primary: #0099f6;
+            --colors--pink: #ef457e;
+            --background--gray: #f8f8f8;
+            --background--blue: #f2faff;
+            --colors--yellow: #ffd44d;
+            --text--secondary: #6a7180;
+            --others--blue: #0a32c3;
+            --swiper-theme-color: #007aff;
+            --swiper-navigation-size: 44px;
+            color: var(--text--primary);
+            cursor: auto;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            box-sizing: border-box;
+            margin: .67em 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: "Dosis variant0", Tofu;
+            color: white;
+            text-align: center;
+            font-weight: 900;
+            line-height: 133%;
+            font-size: 2.75rem;
+        }
+
+    nav.sticky .nav-links h1 a{
+        color: #fff;
+        transition: all 0.4s ease;
+        }
+
+        
+    body {
+        background: #ecececdb;
+    }
+
+    .card-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1250px;
+        margin: 150px auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card-list .card-item {
+        background: #fff;
+        padding: 26px;
+        border-radius: 8px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+        list-style: none;
+        cursor: pointer;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: border 0.5s ease;
+    }
+
+    .card-list .card-item:hover {
+        border: 2px solid #000;
+    }
+
+    .card-list .card-item img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .card-list span {
+        display: inline-block;
+        background: #F7DFF5;
+        margin-top: 32px;
+        padding: 8px 15px;
+        font-size: 0.75rem;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+
+
+
+    .card-item h3 {
+        color: #000;
+        font-size: 1.438rem;
+        margin-top: 28px;
+        font-weight: 600;
+    }
+
+    .card-item .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-35deg);
+        height: 40px;
+        width: 40px;
+        color: white;
+        border: 1px solid #000;
+        border-radius: 50%;
+        margin-top: 40px;
+        transition: 0.2s ease;
+    }
+
+    .card-list .card-item:hover .arrow  {
+        background: #000;
+        color: green; 
+    }
+
+    @media (max-width: 1200px) {
+        .card-list .card-item {
+            padding: 15px;
+        }
+    }
+
+    @media screen and (max-width: 980px) {
+        .card-list {
+            margin: 0 auto;
+        }
+    }  
+    
+    
+    .des{
+            padding: 3px;
+            text-align: center;
+            
+            padding-top: 10px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        button{
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            --swiper-theme-color: #007aff;
+            --swiper-navigation-size: 44px;
+            font-family: DM Sans,sans-serif!important;
+            display: inline-flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            position: relative;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            outline: 0;
+            border: 0;
+            margin: 0;
+            cursor: pointer;
+            user-select: none;
+            vertical-align: middle;
+            
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.75;
+            text-transform: uppercase;
+            min-width: 64px;
+            padding: 6px 16px;
+            border-radius: 4px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            background-color: black;
+            box-shadow: none;
+            color: white;
+            letter-spacing: 0.1em;
+            width: 100%;
+            text-align: center;
+            }
+        button:hover{
+            background-color: black;
+            color: white;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+            /* Google Font Import Link */
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        nav{
+        position: fixed;
+        background-color: #24b8fd;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        transition: all 0.4s ease;
+        }
+        nav.sticky{
+        padding: 15px 20px;
+        background: black;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav .nav-content{
+        height: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        nav .logo a{
+        font-weight: 500;
+        font-size: 35px;
+        color: black;
+        }
+        nav.sticky .logo a{
+        color: #fff;
+        }
+        .nav-content .nav-links{
+        display: flex;
+        }
+        .nav-content .nav-links li{
+        list-style: none;
+        margin: 0 8px;
+        }
+        .nav-links li a{
+        text-decoration: none;
+        color: #0E2431;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px 4px;
+        transition: all 0.3s ease;
+        }
+        .nav-links li a:hover{
+        color: black;
+        }
+        nav.sticky .nav-links li a{
+        color: #fff;
+        transition: all 0.4s ease;
+        }
+        nav.sticky .nav-links li a:hover{
+        color: #0E2431;
+        }
+        .home{
+        height: 100vh;
+        width: 100%;
+        background: url("images/background.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        h2{
+        font-size: 30px;
+        margin-bottom: 6px;
+        color: black;
+        }
+        .text{
+        text-align: justify;
+        padding: 40px 80px;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+          <div class="logo">
+            <h1 href="#" class="logo">Code - Low / No Code</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="code.html">Code</a></li>
+            <li><a href="code_assist.html">Code Assistant</a></li>
+            <li><a href="code_spreadsht.html">Spreadsheets</a></li>
+            <li><a href="code_sql.html">SQL</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <script>
+        let nav = document.querySelector("nav");
+          window.onscroll = function() {
+            if(document.documentElement.scrollTop > 20){
+              nav.classList.add("sticky");
+            }else {
+              nav.classList.remove("sticky");
+            }
+          }
+        </script>
+      
+
+
+    <div class="main">
+
+        <div class="card-list">
+          <a href="#" class="card-item">
+            <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fe45810e7c54baa2705fe9ffeab3799ff4ac2bf96-1296x593.jpg%3Frect%3D80%2C0%2C1136%2C593%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                        
+                        <h3>MagicForm</h3>
+                        <br>
+                        <description>Deploy a no code high quality sales rep that books qualified appointments for you day and night.</description>
+                        <div class="des">
+                          <br><br>
+                          <button type="button" onclick="location.href='https://appsumo.8odi.net/bayRBm'">Visit</button>
+                        </div>
+                        
+                    </a>
+        
+        <a href="#" class="card-item">
+            <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F6d2e7c7855779a7d9ae7249341dcd07adc32e5d5-2532x1256.png%3Frect%3D63%2C0%2C2407%2C1256%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                        
+                        <h3>Peasy Sales</h3>
+                        <br>
+                        <description>Elevate Your Online-to-Offline Sales</description>
+                        <div class="des">
+                          <br><br>
+                          <button type="button" onclick="location.href='https://appsumo.8odi.net/R5aAk7'">Visit</button>
+                        </div>
+                        
+                    </a>
+        
+        
+        <a href="#" class="card-item">
+            <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F34e456817b9c3d07088c148f80988db6eb06d401-2876x1458.png%3Frect%3D41%2C0%2C2794%2C1458%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                        
+                        <h3>Durable</h3>
+                        <br>
+                        <description>Build a website in 30 seconds with AI, leveraging AI-powered design and marketing tools to boost traffic and increase revenue.</description>
+                        <div class="des">
+                          <br><br>
+                          <button type="button" onclick="location.href='https://durable.co/?utm_medium=Referral&utm_campaign=FuturepediaOctWeb&utm_source=Referral&utm_content=FuturepediaOctWeb&utm_term=FuturepediaOctWeb'">Visit</button>
+                        </div>
+                        
+                    </a>
+        
+        <a href="#" class="card-item">
+            <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F7cfe55f25164ac163dce3649f088090d54287c5a-2880x1628.png%3Frect%3D0%2C63%2C2880%2C1503%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                        
+                        <h3>B12.io</h3>
+                        <br>
+                        <description>AI website builder that generates full pages, posts, and emails</description>
+                        <div class="des">
+                          <br><br>
+                          <button type="button" onclick="location.href='https://www.b12.io/ai-website-builder/?utm_source=futurepedia&utm_medium=affiliate&utm_campaign=AItools'">Visit</button>
+                        </div>
+                        
+                    </a>
+        
+        
+        <a href="#" class="card-item">
+            <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Ff3ce6f87c0f4572163466b0a82cd017a25ed459b-2174x1522.jpg%3Frect%3D344%2C357%2C1514%2C790%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                        
+                        <h3>Superflow</h3>
+                        <br>
+                        <description>Open Source toolkit for building an AI assistant that lets users control your product through chat.</description>
+                        <div class="des">
+                          <br><br>
+                          <button type="button" onclick="location.href='https://www.superflows.ai/?utm_source=futurepedia'">Visit</button>
+                        </div>
+                        
+                    </a>
+        
+        
+        <a href="#" class="card-item">
+            <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Ff3ce6f87c0f4572163466b0a82cd017a25ed459b-2174x1522.jpg%3Frect%3D344%2C357%2C1514%2C790%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                        
+                        <h3>Browse AI</h3>
+                        <br>
+                        <description>Train a robot to extract & monitor data from any website, no coding needed.</description>
+                        <div class="des">
+                          <br><br>
+                          <button type="button" onclick="location.href='https://browse.ai/?via=futurepedia'">Visit</button>
+                        </div>
+                        
+                    </a>
+        
+        
+        
+        <a href="#" class="card-item">
+            <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Ff8cf2bacd0f7dcd1ebba2ca39de97193a61a1f67-2522x1227.png%3Frect%3D86%2C0%2C2351%2C1227%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                        
+                        <h3>Bonfire</h3>
+                        <br>
+                        <description>Effortlessly create custom AI chatbots, integrate them into your website without any coding.</description>
+                        <div class="des">
+                          <br><br>
+                          <button type="button" onclick="location.href='https://justbonfire.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                        </div>
+                        
+                    </a>
+        
+        
+        <a href="#" class="card-item">
+            <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fe70a66f123c066f40fe7551df18e4f2b09f0b438-2523x1253.png%3Frect%3D62%2C0%2C2401%2C1253%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                        
+                        <h3>Stackbear</h3>
+                        <br>
+                        <description>Stackbear lets you build, run, and share AI tools tailored to your needs, all without a single line of code..</description>
+                        <div class="des">
+                          <br><br>
+                          <button type="button" onclick="location.href='https://stackbear.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                        </div>
+                        
+                    </a>
+        
+        
+        <a href="#" class="card-item">
+            <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F9f51c29cb7d43299fd4b91ecf51e7105d55f7cf8-2529x1247.jpg%3Frect%3D71%2C0%2C2389%2C1247%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                        
+                        <h3>BotB9r</h3>
+                        <br>
+                        <description>Provide personalized responses to your customers with AI trained Chatbot.</description>
+                        <div class="des">
+                          <br><br>
+                          <button type="button" onclick="location.href='https://www.botb9.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                        </div>
+                        
+                    </a>
+        
+           
+  </div>
+</div>
+</body>
+</html>

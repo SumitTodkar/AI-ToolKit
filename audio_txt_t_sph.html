@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h1{
+            -webkit-text-size-adjust: 100%;
+            --text--primary: #07122b;
+            --cta--primary: #0099f6;
+            --colors--pink: #ef457e;
+            --background--gray: #f8f8f8;
+            --background--blue: #f2faff;
+            --colors--yellow: #ffd44d;
+            --text--secondary: #6a7180;
+            --others--blue: #0a32c3;
+            --swiper-theme-color: #007aff;
+            --swiper-navigation-size: 44px;
+            color: var(--text--primary);
+            cursor: auto;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            box-sizing: border-box;
+            margin: .67em 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: "Dosis variant0", Tofu;
+            color: white;
+            text-align: center;
+            font-weight: 900;
+            line-height: 133%;
+            font-size: 2.75rem;
+        }
+
+    nav.sticky .nav-links h1 a{
+        color: #fff;
+        transition: all 0.4s ease;
+        }
+
+        
+    body {
+        background: #ecececdb;
+    }
+
+    .card-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1250px;
+        margin: 150px auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card-list .card-item {
+        background: #fff;
+        padding: 26px;
+        border-radius: 8px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+        list-style: none;
+        cursor: pointer;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: border 0.5s ease;
+    }
+
+    .card-list .card-item:hover {
+        border: 2px solid #000;
+    }
+
+    .card-list .card-item img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .card-list span {
+        display: inline-block;
+        background: #F7DFF5;
+        margin-top: 32px;
+        padding: 8px 15px;
+        font-size: 0.75rem;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+
+
+
+    .card-item h3 {
+        color: #000;
+        font-size: 1.438rem;
+        margin-top: 28px;
+        font-weight: 600;
+    }
+
+    .card-item .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-35deg);
+        height: 40px;
+        width: 40px;
+        color: white;
+        border: 1px solid #000;
+        border-radius: 50%;
+        margin-top: 40px;
+        transition: 0.2s ease;
+    }
+
+    .card-list .card-item:hover .arrow  {
+        background: #000;
+        color: green; 
+    }
+
+    @media (max-width: 1200px) {
+        .card-list .card-item {
+            padding: 15px;
+        }
+    }
+
+    @media screen and (max-width: 980px) {
+        .card-list {
+            margin: 0 auto;
+        }
+    }  
+    
+    
+    .des{
+            padding: 3px;
+            text-align: center;
+            
+            padding-top: 10px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        button{
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            --swiper-theme-color: #007aff;
+            --swiper-navigation-size: 44px;
+            font-family: DM Sans,sans-serif!important;
+            display: inline-flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            position: relative;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            outline: 0;
+            border: 0;
+            margin: 0;
+            cursor: pointer;
+            user-select: none;
+            vertical-align: middle;
+     
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.75;
+            text-transform: uppercase;
+            min-width: 64px;
+            padding: 6px 16px;
+            border-radius: 4px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            background-color: black;
+            box-shadow: none;
+            color: white;
+            letter-spacing: 0.1em;
+            width: 100%;
+            text-align: center;
+            }
+        button:hover{
+            background-color: black;
+            color: white;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+            /* Google Font Import Link */
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        nav{
+        position: fixed;
+        background-color: #24b8fd;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        transition: all 0.4s ease;
+        }
+        nav.sticky{
+        padding: 15px 20px;
+        background: black;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav .nav-content{
+        height: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        nav .logo a{
+        font-weight: 500;
+        font-size: 35px;
+        color: black;
+        }
+        nav.sticky .logo a{
+        color: #fff;
+        }
+        .nav-content .nav-links{
+        display: flex;
+        }
+        .nav-content .nav-links li{
+        list-style: none;
+        margin: 0 8px;
+        }
+        .nav-links li a{
+        text-decoration: none;
+        color: #0E2431;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px 4px;
+        transition: all 0.3s ease;
+        }
+        .nav-links li a:hover{
+        color: black;
+        }
+        nav.sticky .nav-links li a{
+        color: #fff;
+        transition: all 0.4s ease;
+        }
+        nav.sticky .nav-links li a:hover{
+        color: #0E2431;
+        }
+        .home{
+        height: 100vh;
+        width: 100%;
+        background: url("images/background.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        h2{
+        font-size: 30px;
+        margin-bottom: 6px;
+        color: black;
+        }
+        .text{
+        text-align: justify;
+        padding: 40px 80px;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+          <div class="logo">
+            <h1 href="#" class="logo">Audio-Text to Speech</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="audio_edit.html"><b>Editing</b></a></li>
+            <li><a href="audio_mus.html">Music</a></li>
+            <li><a href="audio_txt_t_sph.html">Transcriber</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <script>
+        let nav = document.querySelector("nav");
+          window.onscroll = function() {
+            if(document.documentElement.scrollTop > 20){
+              nav.classList.add("sticky");
+            }else {
+              nav.classList.remove("sticky");
+            }
+          }
+        </script>
+      
+
+
+    <div class="main">
+        <div class="card-list">
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F4dc642d29507d2e460bbcf47a815af9846729b70-1680x876.png%3Frect%3D1%2C0%2C1679%2C876%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                            
+                            <h3>Fliki
+            
+            
+            
+            </h3>
+            
+            
+            
+            
+                            <br>
+                            <description>Create videos from blog posts in 2 mins</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://fliki.ai/?via=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F35370b561f11cb7e50f4a316994f6cd60f6f934d-1920x848.png%3Frect%3D148%2C0%2C1625%2C848%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>Synthesys Studio
+            
+            
+            
+            </h3>
+            
+            
+            
+            
+                            <br>
+                            <description>Synthesys develops algorithms for text-to-voiceover and videos for commercial use.</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://appsumo.8odi.net/LXreB3'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F4dc642d29507d2e460bbcf47a815af9846729b70-1680x876.png%3Frect%3D1%2C0%2C1679%2C876%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                            
+                            <h3>Synthesys Studio
+            
+            
+            
+            </h3>
+            
+            
+            
+            
+                            <br>
+                            <description>Synthesys develops algorithms for text-to-voiceover and videos for commercial use.</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://appsumo.8odi.net/LXreB3'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fb6604a2d9dc6fb36c5bc7590308e262c5ecc5065-1917x848.png%3Frect%3D147%2C0%2C1625%2C848%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75" alt="Card Image">
+                            
+                            <h3>Audyo
+            
+            
+            
+            </h3>
+            
+            
+            
+            
+                            <br>
+                            <description>Create audio like writing a doc</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://www.audyo.ai/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F6f27e213002c60ee7478be59b82884b1e626c25b-1424x866.png%3Frect%3D0%2C62%2C1424%2C743%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>Voxwave AI
+            
+            
+            
+            </h3>
+            
+            
+            
+            
+                            <br>
+                            <description>AI-personalized lead gen. Puts your voice into your emails. Works with any mailer.</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://www.voxwaveai.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fa97f42c40eba97dd27dd2ade73bf198a92cf990b-1680x876.png%3Frect%3D1%2C0%2C1679%2C876%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>Descript
+            
+            
+            
+            </h3>
+            
+            
+            
+            
+                            <br>
+                            <description>reate a text-to-speech model of your voice; try a live demo.</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://www.descript.com/?lmref=wVa-qw'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fdfb853f3ef5ad7235361c389fcb8e5d4f6d2a270-1920x1080.png%3Frect%3D0%2C39%2C1920%2C1002%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>Mubert
+            
+            
+            
+            
+            </h3>
+            
+            
+            
+            
+                            <br>
+                            <description>Royalty-free music ecosystem for content creators, brands & developers.</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://mubert.com/?via=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F6bd33c79ec68384d2fdc249722b240d41d2274ee-2528x1153.png%3Frect%3D160%2C0%2C2209%2C1153%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>Google Cloud Speech to Text
+
+            </h3>
+
+                            <br>
+                            <description>Accurately convert voice to text in over 125 languages and variants by applying Google’s powerful machine learning models with an easy-to-use API.</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://cloud.google.com/speech-to-text/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>
+            
+            
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F87433d2917594a35f4b7225fa3de71b4e1ca7414-2524x1254.jpg%3Frect%3D61%2C0%2C2403%2C1254%26w%3D640%26h%3D334%26auto%3Dformat&w=1200&q=75" alt="Card Image">
+                            
+                            <h3>Unreal Speech
+
+            </h3>
+ 
+                            <br>
+                            <description>Text-to-Speech API for Scale.</description>
+                            <div class="des">
+                              <br><br>
+                              <button type="button" onclick="location.href='https://unrealspeech.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                            </div>
+                            
+                        </a>     
+  </div>
+</div>
+</body>
+</html>

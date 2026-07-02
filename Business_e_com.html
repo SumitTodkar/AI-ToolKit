@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h1{
+            -webkit-text-size-adjust: 100%;
+            --swiper-navigation-size: 44px;
+            color: var(--text--primary);
+            cursor: auto;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            box-sizing: border-box;
+            margin: .67em 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: "Dosis variant0", Tofu;
+            color: white;
+            text-align: center;
+            font-weight: 900;
+            line-height: 133%;
+            font-size: 2.75rem;
+        }
+
+    nav.sticky .nav-links h1 a{
+        color: #fff;
+        transition: all 0.4s ease;
+        }
+
+        
+    body {
+        background: #ecececdb;
+    }
+
+    .card-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 1250px;
+        margin: 150px auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card-list .card-item {
+        background: #fff;
+        padding: 26px;
+        border-radius: 8px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+        list-style: none;
+        cursor: pointer;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: border 0.5s ease;
+    }
+
+    .card-list .card-item:hover {
+        border: 2px solid #000;
+    }
+
+    .card-list .card-item img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .card-list span {
+        display: inline-block;
+        background: #F7DFF5;
+        margin-top: 32px;
+        padding: 8px 15px;
+        font-size: 0.75rem;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+
+
+
+    .card-item h3 {
+        color: #000;
+        font-size: 1.438rem;
+        margin-top: 28px;
+        font-weight: 600;
+    }
+
+    .card-item .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-35deg);
+        height: 40px;
+        width: 40px;
+        color: white;
+        border: 1px solid #000;
+        border-radius: 50%;
+        margin-top: 40px;
+        transition: 0.2s ease;
+    }
+
+    .card-list .card-item:hover .arrow  {
+        background: #000;
+        color: green; 
+    }
+
+    @media (max-width: 1200px) {
+        .card-list .card-item {
+            padding: 15px;
+        }
+    }
+
+    @media screen and (max-width: 980px) {
+        .card-list {
+            margin: 0 auto;
+        }
+    }  
+    
+    
+    .des{
+            padding: 3px;
+            text-align: center;
+            
+            padding-top: 10px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        button{
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            --swiper-theme-color: #007aff;
+            --swiper-navigation-size: 44px;
+            font-family: DM Sans,sans-serif!important;
+            display: inline-flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            position: relative;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            outline: 0;
+            border: 0;
+            margin: 0;
+            cursor: pointer;
+            user-select: none;
+            vertical-align: middle;
+      
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.75;
+            text-transform: uppercase;
+            min-width: 64px;
+            padding: 6px 16px;
+            border-radius: 4px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            background-color: black;
+            box-shadow: none;
+            color: white;
+            letter-spacing: 0.1em;
+            width: 100%;
+            text-align: center;
+            }
+        button:hover{
+            background-color: black;
+            color: white;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+            /* Google Font Import Link */
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        nav{
+        position: fixed;
+        background-color: #24b8fd;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        transition: all 0.4s ease;
+        }
+        nav.sticky{
+        padding: 15px 20px;
+        background: black;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav .nav-content{
+        height: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        nav .logo a{
+        font-weight: 500;
+        font-size: 35px;
+        color: black;
+        }
+        nav.sticky .logo a{
+        color: #fff;
+        }
+        .nav-content .nav-links{
+        display: flex;
+        }
+        .nav-content .nav-links li{
+        list-style: none;
+        margin: 0 8px;
+        }
+        .nav-links li a{
+        text-decoration: none;
+        color: #0E2431;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px 4px;
+        transition: all 0.3s ease;
+        }
+        .nav-links li a:hover{
+        color: black;
+        }
+        nav.sticky .nav-links li a{
+        color: #fff;
+        transition: all 0.4s ease;
+        }
+        nav.sticky .nav-links li a:hover{
+        color: #0E2431;
+        }
+        .home{
+        height: 100vh;
+        width: 100%;
+        background: url("images/background.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        h2{
+        font-size: 30px;
+        margin-bottom: 6px;
+        color: black;
+        }
+        .text{
+        text-align: justify;
+        padding: 40px 80px;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+          <div class="logo">
+            <h1 href="#" class="logo">Business - E-Commerce</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Business.html">Business</a></li>
+            <li><a href="Business_Finance.html">Finance</a></li>
+            <li><a href="Business_sales.html">Sales</a></li>
+            <li><a href="Business_Startups.html">Startups</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <script>
+        let nav = document.querySelector("nav");
+          window.onscroll = function() {
+            if(document.documentElement.scrollTop > 20){
+              nav.classList.add("sticky");
+            }else {
+              nav.classList.remove("sticky");
+            }
+          }
+        </script>
+      
+
+
+    <div class="main">
+
+        <div class="card-list">
+            <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F95e54dcbb04ae9d42532ac693aa3708825e9685f-1897x917.png%3Frect%3D71%2C0%2C1757%2C917%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>DigitalGenius</h3>
+                <br>
+                <description>DigitalGenius is an e-commerce platform that automates customer service processes, enhances the customer experience, and reduces costs for eCommerce and retail businesses</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://digitalgenius.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F71455e0c62710af7508d04dfceca48f87cf8ed94-1600x900.png%3Frect%3D0%2C33%2C1600%2C835%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Aidaptive</h3>
+                <br>
+                <description>Predictive personalization engines for eCommerce and Hospitality</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://aidaptive.com/request-demo/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia-campaign-Q22023'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F493789c7071542ecd8a60d4ad1411c2502b3a778-1833x927.jpg%3Frect%3D29%2C0%2C1776%2C927%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Sellesta</h3>
+                <br>
+                <description>Revamp your Amazon business with Sellesta AI tools! Keyword Research, Listing Optimization, and Keyword Tracking. Start Free Now!</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://sellesta.com/marketplace/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F0732079080fdf4b0dae38d14d98898e7638d233f-2506x1257.jpg%3Frect%3D49%2C0%2C2409%2C1257%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Lumiere 3D</h3>
+                <br>
+                <description>Generate immersive 3D videos for e-commerce and marketing effortlessly.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://www.lumiere3d.ai/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Ffd43373d8813616c1ab97c8511258e1d929b0380-2528x1252.png%3Frect%3D65%2C0%2C2399%2C1252%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Penny AI</h3>
+                <br>
+                <description>Enjoy seamless price comparison, similar items discovery, and automated pros and cons analysis.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://penny.im/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F069bbd2e396ef032fdd8dd3d280813eb365bc61a-2530x1230.png%3Frect%3D87%2C0%2C2357%2C1230%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>UpWin</h3>
+                <br>
+                <description>Save valuable time and get ahead of the competition with in-depth analyses and personalized recommendations.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://upwin.club/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2Fa0931251707d6b6cf93fe9da10780a426d0c5a47-2538x1239.png%3Frect%3D82%2C0%2C2374%2C1239%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Wordlab</h3>
+                <br>
+                <description>Escape the hefty costs and long waits of professional studio shoots and create eye-catching eCommerce product photos, anytime, anywhere.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://wordlab.io/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+              <a href="#" class="card-item">
+                <img src="https://www.futurepedia.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fu0v1th4q%2Fproduction%2F82ba788a929c4c769eae294dee7413eb785cf35f-2518x1246.png%3Frect%3D65%2C0%2C2388%2C1246%26w%3D640%26h%3D334%26auto%3Dformat&w=1920&q=75">
+          
+                <h3>Ecommerce Booster | SEMRUSH</h3>
+                <br>
+                <description>Tailored action plans and AI tools to optimize your product pages and boost sales effortlessly.</description>
+                <div class="des">
+                <br><br>
+                <button type="button" onclick="location.href='https://www.semrush.com/lp/ecommerce-booster/en/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia'">Visit</button>
+                 </div>
+              </a>
+            
+  </div>
+</div>
+</body>
+</html>
