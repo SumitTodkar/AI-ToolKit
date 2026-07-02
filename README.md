@@ -52,39 +52,49 @@ Whether you're looking for AI tools for writing, coding, video editing, audio pr
 
 ### Home Page
 
-![Home](screenshots/Home.png)
+<img width="1890" height="858" alt="image" src="https://github.com/user-attachments/assets/870052e3-72ef-422c-bd5d-de0766212a61" />
+
 
 ### AI Tools Directory
 
-![Directory](screenshots/Home-1.png)
+<img width="1890" height="862" alt="image" src="https://github.com/user-attachments/assets/6895e71d-2b82-4bd7-8866-834eb19835a8" />
+
+
 
 ### Text Tools
 
-![Text](screenshots/Text.png)
+<img width="1896" height="865" alt="image" src="https://github.com/user-attachments/assets/cf66dc51-5738-496f-970a-123c087f528a" />
+
 
 ### Code Tools
 
-![Code](screenshots/Code.png)
+<img width="1902" height="865" alt="image" src="https://github.com/user-attachments/assets/ceb5f775-fc8c-4c8b-93c4-d19ec225a8ca" />
+
 
 ### Audio Tools
 
-![Audio](screenshots/Audio.png)
+<img width="1890" height="858" alt="image" src="https://github.com/user-attachments/assets/16656520-352b-4e78-a772-eb2329d4f615" />
+
 
 ### Video Tools
 
-![Video](screenshots/Video.png)
+<img width="1896" height="857" alt="image" src="https://github.com/user-attachments/assets/0f4f11eb-74b3-4b51-9a4d-3d8b354280e0" />
+
 
 ### Business Tools
 
-![Business](screenshots/Business.png)
+<img width="1888" height="852" alt="image" src="https://github.com/user-attachments/assets/7c95b2dc-f7de-4343-8efe-87e35398ac36" />
+
 
 ### Login Page
 
-![Login](screenshots/Login.png)
+<img width="1906" height="842" alt="image" src="https://github.com/user-attachments/assets/1bfec36a-38fd-4efe-9ef9-7d17d8df7d1d" />
+
 
 ### Registration Page
 
-![Registration](screenshots/Sign-in.png)
+<img width="1893" height="862" alt="image" src="https://github.com/user-attachments/assets/223ea9da-9d65-4e05-8bcc-0c38c567ee08" />
+
 
 ---
 
